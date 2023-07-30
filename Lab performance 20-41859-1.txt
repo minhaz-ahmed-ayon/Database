@@ -1,0 +1,11 @@
+1) select empno,sal+nvl(comm,0) from emp
+2) select * from emp where deptno in(10,20) and sal>2500
+3) select * from emp where ename like '__A%E'
+4) select * from emp where deptno=(select deptno from emp where ename= 'SCOTT')
+5) select * from emp where deptno=(select deptno from dept where loc= 'DALLAS')
+6) select dname,loc from dept where deptno in(select deptno from emp where mgr=(select empno from emp where ename ='CLARK'))
+7) select deptno, count(*) from emp where job ='MANAGER' group by deptno having count(*)>3
+8) select * from emp where sal=(select max(sal) from emp where sal<(select max(sal) from emp))
+9) update dept set loc= 'DHAKA' where loc= 'DALLAS'
+10) select round(avg(sal),2) from emp group by job order by avg(sal) asc
+11) delete from emp where comm is not null and (deptno =10 or deptno = 20)

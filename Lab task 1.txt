@@ -1,0 +1,20 @@
+create table AIUB (DEPT_ID number(6), DEPT_CODE varchar(32), DEPT_NAME varchar(64));
+
+insert into AIUB values(1,'MATH','MATHEMATICS');
+
+
+select * from AIUB;
+
+select * from AIUB where DEPT_ID>3;
+
+select DEPT_ID,DEPT_NAME  from AIUB;
+
+select * from AIUB where DEPT_CODE= 'CSE';
+
+select * from AIUB where DEPT_ID>=4;
+
+update AIUB set DEPT_CODE='MTH' where DEPT_ID=1;
+
+delete from AIUB where DEPT_ID=2;
+
+select * from AIUB;
